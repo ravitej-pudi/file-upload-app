@@ -7,7 +7,11 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch:
+
+permissions:
+  id-token: write  # Grant write permissions for id-token
+  contents: read   # Allow read access to the repository contents      
+  
 
 jobs:
   build:
